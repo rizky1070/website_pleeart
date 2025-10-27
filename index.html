@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleeart - Jasa Cetak Undangan & Desain</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <h1 class="logo">pleeart</h1>
+            
+            <ul class="nav-menu">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#about">Tentang Kami</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+
+            <button id="menu-toggle" aria-label="Buka menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="container">
+                <h2>Solusi Cetak Kebutuhan Acara Anda</h2>
+                <p>Undangan, tahlilan, ulang tahun, khitan, dan lainnya. Kami siap melayani dengan desain terbaik.</p>
+                <a href="#produk" class="cta-button">Lihat Desain</a>
+            </div>
+        </section>
+
+        <section id="produk">
+            <div class="container">
+                <h2>Desain Produk Kami</h2>
+                <p>Klik pada produk yang Anda minati untuk melakukan pemesanan.</p>
+                
+                <div class="product-grid" id="product-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>Tentang Pleeart</h2>
+                <p><strong>Pleeart</strong> adalah usaha yang bergerak di bidang jasa desain dan cetak untuk berbagai kebutuhan acara. Kami berkomitmen untuk memberikan kualitas cetak terbaik dengan desain yang modern dan elegan untuk momen spesial Anda, mulai dari undangan pernikahan, tahlilan, ulang tahun, khitan, hingga walimatul.</p>
+                <p>Kami mengerti bahwa setiap acara adalah unik, oleh karena itu kami menawarkan layanan kustomisasi desain untuk memenuhi ekspektasi Anda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer id="kontak">
+        <div class="container">
+            <div class="contact-info">
+                <h3>Hubungi Kami</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/plee.art?igsh=dTRnM3A4eDVsdmVq" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i> @plee.art
+                    </a>
+                    <a href="https://wa.me/6287853338254" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i> Whatsapp
+                    </a>
+                    <!-- <a href="https://facebook.com/akunanda" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook"></i> Pleeart Facebook
+                    </a> -->
+                </div>
+            </div>
+            <p class="copyright">&copy; 2025 Pleeart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            
+            <img src="" alt="Detail Produk" id="modal-product-image">
+
+            <h3>Form Pemesanan</h3>
+            <p>Anda memesan: <strong id="modal-product-name">Nama Produk</strong></p>
+            
+            <div class="order-summary">
+                <div>Jumlah: <strong id="modal-qty">50</strong> pcs</div>
+                <div>Harga Satuan: <strong id="modal-price">Rp 0</strong></div>
+                <div class="total-price">Total Harga: <strong id="modal-total">Rp 0</strong></div>
+            </div>
+            
+            <form id="order-form">
+                <input type="hidden" id="product-name-input">
+                <input type="hidden" id="product-price-input">
+                
+                <div class="form-group">
+                    <label for="cust-name">Nama Anda:</label>
+                    <input type="text" id="cust-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cust-wa">No. WhatsApp (cth: 0812...):</label>
+                    <input type="tel" id="cust-wa" placeholder="08xxxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cust-qty">Jumlah Pesan (Min. 25):</label>
+                    <input type="number" id="cust-qty" value="25" min="25" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cust-notes">Catatan Tambahan:</label>
+                    <textarea id="cust-notes" rows="3" placeholder="Misal: ganti warna, tambah foto, dll."></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Pesan Sekarang via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
